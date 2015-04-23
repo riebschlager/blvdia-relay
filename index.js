@@ -13,6 +13,9 @@ io.on('connection', function(socket){
   socket.on('snap', function(msg){
     io.emit('snap', msg);
   });
+  socket.on('complete', function(msg){
+    io.emit('complete', msg);
+  });
 });
 
 http.listen(process.env.PORT || 5000, function(){
