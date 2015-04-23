@@ -10,6 +10,9 @@ io.on('connection', function(socket){
   socket.on('shutter', function(msg){
     io.emit('shutter', msg);
   });
+  socket.on('snap', function(msg){
+    io.emit('snap', msg);
+  });
 });
 
 http.listen(process.env.PORT || 5000, function(){
