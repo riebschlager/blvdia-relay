@@ -16,6 +16,9 @@ io.on('connection', function(socket) {
     socket.on('complete', function(msg) {
         io.emit('complete', msg);
     });
+    socket.on('preview', function(msg) {
+        io.emit('preview', msg);
+    });
     socket.on('preview-complete', function(msg) {
         io.emit('preview-complete', msg);
     });
