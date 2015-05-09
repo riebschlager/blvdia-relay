@@ -10,6 +10,9 @@ io.on('connection', function(socket) {
     socket.on('shutter', function(msg) {
         io.emit('shutter', msg);
     });
+    socket.on('heartbeat', function(msg) {
+        io.emit('heartbeat', msg);
+    });
     socket.on('snap', function(msg) {
         io.emit('snap', msg);
     });
