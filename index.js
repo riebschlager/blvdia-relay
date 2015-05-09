@@ -22,6 +22,12 @@ io.on('connection', function(socket) {
     socket.on('preview-complete', function(msg) {
         io.emit('preview-complete', msg);
     });
+    socket.on('shutdown', function(msg) {
+        io.emit('shutdown', msg);
+    });
+    socket.on('reboot', function(msg) {
+        io.emit('reboot', msg);
+    });
 });
 
 http.listen(process.env.PORT || 5000, function() {
