@@ -7,6 +7,9 @@ app.get('/', function(request, response) {
 });
 
 io.on('connection', function(socket) {
+    socket.on('deploy', function(msg) {
+        io.emit('deploy', msg);
+    });
     socket.on('shutter', function(msg) {
         io.emit('shutter', msg);
     });
